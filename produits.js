@@ -16,11 +16,12 @@ const BOUTIQUE = {
   instagram: "complice.be",
   email: "compliceshopinfo@gmail.com",
   ville: "Liège",
-  delai: "2 semaines max",      // délai pour une pièce sur commande
+  delai: "2 semaines max",
+  nuancier: "https://en.filcolana.dk/yarns/pernilla/farver.html",   // palette de couleurs de la laine      // délai pour une pièce sur commande
 
   /* Clé Web3Forms : les commandes arrivent par e-mail (voir LISEZMOI.md).
      Collez entre les guillemets la clé reçue par e-mail sur web3forms.com */
-  cleFormulaire: ""
+  cleFormulaire: "b542158a-2f75-4a7f-b014-0c8033904a30"
 };
 
 const PRODUITS = [
