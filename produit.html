@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complice</title>
+  <meta name="description" content="Une création Complice, crochetée à la main à Liège.">
+  <meta name="theme-color" content="#938A2D">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/icone-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/icone-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a href="index.html" class="brand" aria-label="Complice, accueil"><span class="wordmark" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html#creations">Créations</a>
+      <a href="index.html#idee">Notre idée</a>
+    </nav>
+    <a class="pill" href="index.html#commander">Commander <span class="count" id="count" hidden>0</span></a>
+  </div>
+</header>
+
+<main id="page">
+  <div class="wrap back"><a href="index.html#creations">← Toutes les créations</a></div>
+  <div id="fiche"></div>
+
+  <section class="section section-cream">
+    <div class="wrap">
+      <div class="menu-line section-line"><h2 class="title">Les autres créations</h2></div>
+      <div class="cards" id="autres"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span class="mark mark-cream" aria-hidden="true"></span>
+    <div class="foot-links">
+      <a id="lnkInsta" href="https://www.instagram.com/complice.be/" target="_blank" rel="noopener"><svg class="insta-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.4"/><circle class="dot" cx="17.6" cy="6.4" r="1.2"/></svg>complice.be</a>
+      <span id="lnkMail">compliceshopinfo@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="produits.js"></script>
+<script src="commun.js"></script>
+<script src="produit.js"></script>
+</body>
+</html>
