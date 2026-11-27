@@ -21,7 +21,16 @@ const BOUTIQUE = {
 
   /* Clé Web3Forms : les commandes arrivent par e-mail (voir LISEZMOI.md).
      Collez entre les guillemets la clé reçue par e-mail sur web3forms.com */
-  cleFormulaire: "b542158a-2f75-4a7f-b014-0c8033904a30"
+  cleFormulaire: "b542158a-2f75-4a7f-b014-0c8033904a30",
+
+  /* E-mail automatique de confirmation au client (EmailJS, gratuit).
+     Collez les 3 identifiants trouvés sur emailjs.com (voir LISEZMOI.md).
+     Tant qu'ils sont vides, aucun e-mail n'est envoyé au client. */
+  emailjs: {
+    clePublique: "myTFHIJU3j8m8Hbq4",   // Account → General → Public Key
+    service: "service_5dzn8v6",       // Email Services → Service ID
+    modele: "template_xgimobi"         // Email Templates → Template ID
+  }
 };
 
 const PRODUITS = [
