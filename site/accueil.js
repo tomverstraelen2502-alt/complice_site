@@ -62,6 +62,22 @@
   });
 
   const form = $("#orderForm");
+
+  /* E-mail de confirmation au client (EmailJS). Ne bloque jamais la commande. */
+  async function confirmationClient(d) {
+    const e = BOUTIQUE.emailjs || {};
+    if (!e.clePublique || !e.service || !e.modele || !d.email) return;
+    try {
+      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: e.service, template_id: e.modele, user_id: e.clePublique,
+          template_params: { nom: d.nom || "", email: d.email, commande: d.commande || "", total: d.total || "" }
+        })
+      });
+    } catch (_) { /* la commande est déjà envoyée : on n'affiche pas d'erreur */ }
+  }
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     $("#error").textContent = "";
@@ -86,6 +102,7 @@
       });
       const res = await rep.json().catch(() => ({}));
       if (!rep.ok || res.success === false) throw new Error(res.message || rep.status);
+      await confirmationClient(donnees);
       try { sessionStorage.setItem("commande", $("#fCommande").value + "\nTotal : " + $("#fTotal").value); } catch (_) {}
       C.ecrire([]);
       location.href = "merci.html";
